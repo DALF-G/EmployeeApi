@@ -3,7 +3,7 @@
 const mongoose =require("mongoose")
 
 // create a schema from the mongoose module
-const schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     name : String,
