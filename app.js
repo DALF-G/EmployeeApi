@@ -21,6 +21,10 @@ app.use("/api/auth",authRoutes)
 const usersRoutes = require("./routes/users")
 app.use("/api/users", usersRoutes)
 
+// specify the route to access departments
+const departmentsRoutes = require("./routes/departments")
+app.use("/api/departments", departmentsRoutes)
+
 //  connect to the database
 mongoose.connect(process.env.MONGO_URI).then(()=>console.log("mongo database connected succesfully..")).catch(err=> console.log("Unable to connect to db"))
 
