@@ -82,4 +82,17 @@ router.put("/:id", async (req, res)=>{
     }
 })
 
+//  below is a delete router to delete a department
+router.delete("/:id", async (req, res)=>{
+    try{
+        const deletedDepartment = await department.findByIdAndDelete(req.params.id);
+        if (!deletedDepartment) {
+            return res.status(404).json({ message: "Department not found" });
+        }
+        res.json({ message: "Department deleted successfully", deletedDepartment });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 module.exports = router;
