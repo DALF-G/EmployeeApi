@@ -16,11 +16,11 @@ const userSchema = new Schema({
 // employee schema
 const employeeShema = new Schema({
     userId : {type: mongoose.Schema.Types.ObjectId,ref: 'user',default:null},
-    firstName: {type: String, required:true},
-    lastName: {type: String, required:true},
+    firstName: {type: String},
+    lastName: {type: String},
     email : {type: String,required : true, unique: true},
     departmentId : {type: Schema.Types.ObjectId, ref: 'department', required: true},
-    jobTitle : {type: String, required:true},
+    jobTitle : {type: String},
     salary : {type: Number},
     status : {type: String, enum: ['active','inactive', 'on_leave'], default:'active'},
     createdAt : {type: Date, default: Date.now},
