@@ -3,7 +3,6 @@ const router = express.Router();
 const {employee, department} = require('../models/models');
 
 const auth = require("../middleware/auth");
-const { route } = require('./employees');
 
 
 // register a new employee
