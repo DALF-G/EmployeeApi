@@ -33,7 +33,7 @@ app.use("/api/employee",employeeRoutes);
 mongoose.connect(process.env.MONGO_URI).then(()=>console.log("mongo database connected succesfully..")).catch(err=> console.log("Unable to connect to db"))
 
 // Specifie the port and run the app
-const PORT = process.env.PORT || 3000
+const PORT = 3000
 app.listen(PORT,()=>{
     console.log("The server is running on PORT 3000...")
 })
