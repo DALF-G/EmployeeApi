@@ -30,7 +30,7 @@ const employeeRoutes = require("./routes/employees")
 app.use("/api/employee",employeeRoutes);
 
 //  connect to the database
-mongoose.connect(process.env.MONGO_URI).then(()=>console.log("mongo database connected succesfully..")).catch(err=> console.log("Unable to connect to db"))
+mongoose.connect(process.env.MONGO_URI).then(()=>console.log("mongo database connected succesfully..")).catch(err=> console.log(err.message))
 
 // Specifie the port and run the app
 const PORT = 3000
